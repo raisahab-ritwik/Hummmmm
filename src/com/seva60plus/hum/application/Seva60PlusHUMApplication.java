@@ -1,4 +1,4 @@
-package com.seva60plus.hum.activity;
+package com.seva60plus.hum.application;
 
 import org.acra.ACRA;
 import org.acra.ReportField;
@@ -16,6 +16,6 @@ public class Seva60PlusHUMApplication extends Application {
 	@Override
 	public void onCreate() {
 		super.onCreate();
-		//ACRA.init(this);
+		ACRA.init(this);
 	}
 }

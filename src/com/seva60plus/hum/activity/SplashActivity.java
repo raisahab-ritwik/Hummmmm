@@ -106,9 +106,11 @@ public class SplashActivity extends Activity implements OnCheckUserListener, OnC
 
 				Hum mHum = PreferenceUtil.fetchUserClass(SplashActivity.this);
 				if (mHum != null && mHum.getPhone().length() > 0) {
+					Log.e("Phone", "Phone not null");
 					System.out.println("Phone not null");
 					startActivity(new Intent(SplashActivity.this, DashboardActivity.class));
 				} else {
+					Log.e("Phone", "Phone null or Hum object null");
 					if (Util.isInternetAvailable(mContext)) {
 						// speedCheck();
 						System.out.println("No Phone");
@@ -170,7 +172,7 @@ public class SplashActivity extends Activity implements OnCheckUserListener, OnC
 	}
 
 	/**
-	 * call broadcost reciver for send sms
+	 * call broadcast receiver for send sms
 	 */
 	private void fireAlarm() {
 
@@ -187,7 +189,7 @@ public class SplashActivity extends Activity implements OnCheckUserListener, OnC
 	}
 
 	/**
-	 * call broadcost reciver for send sms
+	 * call broadcast receiver for send sms
 	 */
 	private void fireAlarm2() {
 
@@ -204,7 +206,7 @@ public class SplashActivity extends Activity implements OnCheckUserListener, OnC
 	}
 
 	/**
-	 * call broadcost reciver for send sms
+	 * call broadcast receiver for send sms
 	 */
 	private void fireAlarm3() {
 

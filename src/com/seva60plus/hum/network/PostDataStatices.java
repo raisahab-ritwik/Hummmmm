@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.text.format.Time;
 
 import com.seva60plus.hum.R;
+import com.seva60plus.hum.model.StaticConstant;
 import com.seva60plus.hum.util.PreferenceUtil;
 import com.seva60plus.hum.wellbeing.WellBeingActivityExercise;
 import com.seva60plus.hum.wellbeing.WellBeingActivityMood;
@@ -36,7 +37,9 @@ public class PostDataStatices extends BroadcastReceiver {
 			String tm = Integer.toString(time.hour) + Integer.toString(time.minute) + Integer.toString(time.second);
 
 			System.out.println("Postime: " + tm);
-			if (PreferenceUtil.fetchStaticData(context).isShowReminder()) {
+
+			StaticConstant constant = PreferenceUtil.fetchStaticData(context);
+			if (constant != null && constant.isShowReminder()) {
 				// time 11:10:10
 				if (tm.contains("11101")) {
 					System.out.println("Postime:ALmo " + tm);

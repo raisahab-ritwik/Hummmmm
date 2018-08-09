@@ -63,8 +63,7 @@ public class PreferenceUtil {
 
 	/** Fetching StaticDataClass details */
 	public static StaticConstant fetchStaticData(final Context mContext) {
-		SharedPreferences tfdsPrefs = mContext.getSharedPreferences(
-				"staticPref", Context.MODE_PRIVATE);
+		SharedPreferences tfdsPrefs = mContext.getSharedPreferences("staticPref", Context.MODE_PRIVATE);
 		StaticConstant userClass = null;
 		String serializeOrg = tfdsPrefs.getString(STATIC_CONSTANTS, null);
 		try {
